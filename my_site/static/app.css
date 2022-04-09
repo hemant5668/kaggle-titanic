@@ -1,0 +1,28 @@
+#main-header{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10%;
+    background-color: #280d6b;
+}
+
+#main-header a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#main-header a:hover,
+#main-header a:active{
+    color: cadetblue;
+}  
+
+#main-navigation h1 a:hover,
+#main-navigation h1 a:active{
+    color: white;
+}

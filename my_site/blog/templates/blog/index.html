@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %} My blog{% endblock  %}
+
+{% block css_files  %}
+    <link rel="stylesheet" href="{% static "blog/includes/post.css"%}">
+    <link rel="stylesheet" href="{% static "blog/index.css"%}">
+{% endblock  %}
+
+
+{% block content %}
+
+
+<section id="welcome">
+    <header>
+        <img src="{%static "images/302.png"%}" alt="author of the blog">
+        <h2>Hemant's blog</h2>
+        
+    </header>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, consequatur?</p>
+</section>
+
+<section id="latest-posts">
+    <h2>My latest post</h2>
+    <ul>
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h3>What i do</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veritatis harum quaerat rerum eos repellat, sunt qui ratione reiciendis labore laborum quo deleniti molestiae voluptate asperiores! Repellendus omnis rerum quidem?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus placeat dolor saepe dolore laborum similique distinctio omnis amet nobis sint ad illum velit rem, nulla pariatur nihil soluta earum? Soluta?</p>
+</section>
+{% endblock  %}
